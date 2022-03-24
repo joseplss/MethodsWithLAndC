@@ -11,7 +11,7 @@ namespace MethodsWithLoopsAndConditionals
             Console.WriteLine($"EXCERCISE 1\nI am going to output numbers 1000 through -1000, sorry!");
             OneThroughThousand();
 
-            NextExcercise();
+            NextExcercise(); //Extra Method simply to clear console and continue
 
             //EX2
             Console.WriteLine($"EXCERCISE 2\nI will now output numbers 3 through 999 but only by 3s!");
@@ -112,7 +112,7 @@ namespace MethodsWithLoopsAndConditionals
         public static bool EvenOrOdd()
         {
             int evenOrOddNum = int.Parse(Console.ReadLine());
-            bool evenOrOddRes = (evenOrOddNum == 0) ? false : true;
+            bool evenOrOddRes = (evenOrOddNum % 2 == 1) ? false : true;
             return evenOrOddRes;
         }//Ternary Operator as a return method
 
@@ -137,8 +137,7 @@ namespace MethodsWithLoopsAndConditionals
         {
             int votingAge = int.Parse(Console.ReadLine());
             var ageToVote = 18;
-            int ageLeft = 0;
-            ageLeft = ageToVote - votingAge;
+            int ageLeft = ageToVote - votingAge;
             if (votingAge < ageToVote)
             {
                 if (votingAge == 0)
